@@ -16,7 +16,9 @@ const SECURITY_HEADERS = [
 ];
 
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
+  images: { unoptimized: true },
   // Lock the workspace root so Next stops complaining about the parent lockfile.
   outputFileTracingRoot: path.join(__dirname),
   async headers() {
