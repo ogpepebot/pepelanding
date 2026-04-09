@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "@/styles/PepeLanding.module.css";
 
-const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 const CONTRACT = "0x4dFae3690b93c47470b03036A17B23C1Be05127C";
 const SUPPLY = 37321;
 const UNISWAP_URL = `https://app.uniswap.org/swap?outputCurrency=${CONTRACT}`;
@@ -15,77 +13,77 @@ const ETHERSCAN_URL = `https://etherscan.io/token/${CONTRACT}`;
 const socials = [
   {
     href: "https://twitter.com/theogpepe2020",
-    src: `${bp}/socials/x-logo.png`,
+    src: "/socials/x-logo.png",
     alt: "X / Twitter",
   },
   {
     href: "https://t.me/OgPeperc20",
-    src: `${bp}/socials/telegram-logo.png`,
+    src: "/socials/telegram-logo.png",
     alt: "Telegram",
   },
-  { href: UNISWAP_URL, src: `${bp}/socials/uniswap-logo.png`, alt: "Uniswap" },
-  { href: ETHERSCAN_URL, src: `${bp}/socials/etherscan.png`, alt: "Etherscan" },
+  { href: UNISWAP_URL, src: "/socials/uniswap-logo.png", alt: "Uniswap" },
+  { href: ETHERSCAN_URL, src: "/socials/etherscan.png", alt: "Etherscan" },
   {
     href: "https://www.dextools.io/app/es/ether/pair-explorer/0xa84181f223a042949e9040e42b44c50021802db6",
-    src: `${bp}/socials/dextools.png`,
+    src: "/socials/dextools.png",
     alt: "DexTools",
   },
   {
     href: "https://www.coingecko.com/en/coins/the-original-pepe",
-    src: `${bp}/socials/coingecko.png`,
+    src: "/socials/coingecko.png",
     alt: "CoinGecko",
   },
   {
     href: "https://the-og-pepe.medium.com/",
-    src: `${bp}/socials/medium-logo.png`,
+    src: "/socials/medium-logo.png",
     alt: "Medium",
   },
   {
     href: "https://github.com/theogpepe/",
-    src: `${bp}/socials/github-logo.png`,
+    src: "/socials/github-logo.png",
     alt: "GitHub",
   },
 ];
 
 const roadmap = [
   {
-    src: `${bp}/images/roadmap-icons/launch.webp`,
+    src: "/images/roadmap-icons/launch.webp",
     title: "Launch",
     date: "Q4 2020",
     note: "Born in the swamp.",
   },
   {
-    src: `${bp}/images/roadmap-icons/hibernate.webp`,
+    src: "/images/roadmap-icons/hibernate.webp",
     title: "Hibernate",
     date: "2021–22",
     note: "Frogs sleep.",
   },
   {
-    src: `${bp}/images/roadmap-icons/clone-pepe.webp`,
+    src: "/images/roadmap-icons/clone-pepe.webp",
     title: "Famous Pepe Reignites Interest",
     date: "Q3 2023",
     note: "The other Pepe blows up. People remember there was a first one.",
   },
   {
-    src: `${bp}/images/roadmap-icons/cto.webp`,
+    src: "/images/roadmap-icons/cto.webp",
     title: "Community Takes Over",
     date: "Q4 2023",
     note: "Holders ran it.",
   },
   {
-    src: `${bp}/images/roadmap-icons/pepex.webp`,
+    src: "/images/roadmap-icons/pepex.webp",
     title: "Dev Joins CTO. PepeX Launches.",
     date: "Q1 2024",
     note: "A DEX built for the swamp.",
   },
   {
-    src: `${bp}/images/roadmap-icons/hibernate.webp`,
+    src: "/images/roadmap-icons/hibernate.webp",
     title: "The Longest Crypto Winter",
     date: "2025",
     note: "Things went quiet. Building kept going.",
   },
   {
-    src: `${bp}/images/pepex_explosion.png`,
+    src: "/images/pepex_explosion.png",
     title: "PepeX Perpetuals",
     date: "Now · 2026",
     note: "0% maker / 0.05% taker. Fees go to buybacks.",
@@ -93,7 +91,7 @@ const roadmap = [
     raw: true,
   },
   {
-    src: `${bp}/images/pepe_claw.png`,
+    src: "/images/pepe_claw.png",
     title: "Pepe Agent is Live",
     date: "Live · Q2 2026",
     note: "Running in the Telegram group. Talks, builds, posts its own updates. Powered by OpenClaw.",
@@ -101,13 +99,13 @@ const roadmap = [
     raw: true,
   },
   {
-    src: `${bp}/images/roadmap-icons/moon.webp`,
+    src: "/images/roadmap-icons/moon.webp",
     title: "Base Expansion + Animated 3D Pepe with Voice Chat",
     date: "Coming soon",
     note: "PEPE goes multichain. Animated 3D Pepe with voice chat.",
   },
   {
-    src: `${bp}/images/roadmap-icons/ellipse-5@2x.png`,
+    src: "/images/roadmap-icons/ellipse-5@2x.png",
     title: "Beyond",
     date: "???",
     note: "The frog keeps going.",
@@ -275,7 +273,7 @@ export default function PepeLanding() {
             >
               <div className={styles.brandMark}>
                 <Image
-                  src={`${bp}/logo.png`}
+                  src="/logo.png"
                   alt="OG Pepe"
                   width={36}
                   height={36}
@@ -454,7 +452,7 @@ export default function PepeLanding() {
                   rel="noreferrer"
                 >
                   <Image
-                    src={`${bp}/images/uniswap.png`}
+                    src="/images/uniswap.png"
                     alt=""
                     width={18}
                     height={18}
@@ -476,7 +474,7 @@ export default function PepeLanding() {
                   rel="noreferrer"
                 >
                   <Image
-                    src={`${bp}/socials/etherscan.png`}
+                    src="/socials/etherscan.png"
                     alt=""
                     width={16}
                     height={16}
@@ -529,7 +527,7 @@ export default function PepeLanding() {
               <div className={styles.swampPepe}>
                 <div className={styles.pepeGlow} aria-hidden="true" />
                 <Image
-                  src={`${bp}/images/pepe_blinder.gif`}
+                  src="/images/pepe_blinder.gif"
                   alt="OG Pepe"
                   width={512}
                   height={512}
@@ -667,7 +665,7 @@ export default function PepeLanding() {
               <div className={`${styles.agentCard} ${styles.agentCardFeatured}`}>
                 <span className={styles.agentDefaultBadge}>LIVE</span>
                 <Image
-                  src={`${bp}/images/pepe_claw.png`}
+                  src="/images/pepe_claw.png"
                   alt="Pepe Agent"
                   width={96}
                   height={96}
@@ -701,21 +699,21 @@ export default function PepeLanding() {
               {/* Capability cards */}
               <div className={styles.agentCapGrid}>
                 <div className={styles.agentCapCard}>
-                  <Image src={`${bp}/images/token/pepe.png`} alt="" width={40} height={40} />
+                  <Image src="/images/token/pepe.png" alt="" width={40} height={40} />
                   <div>
                     <p className={styles.agentCapTitle}>Community</p>
                     <p className={styles.agentCapBody}>Answers questions, greets holders, keeps the swamp alive. Open to everyone in Telegram.</p>
                   </div>
                 </div>
                 <div className={styles.agentCapCard}>
-                  <Image src={`${bp}/images/pepe_builder.png`} alt="" width={40} height={40} />
+                  <Image src="/images/pepe_builder.png" alt="" width={40} height={40} />
                   <div>
                     <p className={styles.agentCapTitle}>Builder</p>
                     <p className={styles.agentCapBody}>Debugs, explains contracts, ships things. Documents its own work on the portfolio.</p>
                   </div>
                 </div>
                 <div className={styles.agentCapCard}>
-                  <Image src={`${bp}/images/pepe_wallet.png`} alt="" width={40} height={40} />
+                  <Image src="/images/pepe_wallet.png" alt="" width={40} height={40} />
                   <div>
                     <p className={styles.agentCapTitle}>Wallet</p>
                     <p className={styles.agentCapBody}>Has its own wallet. Receives, tracks, and will distribute on-chain.</p>
@@ -728,7 +726,7 @@ export default function PepeLanding() {
             <div className={styles.manifestoInline} style={{ marginTop: '2.5rem' }}>
               <div className={styles.manifestoInlineHeader}>
                 <Image
-                  src={`${bp}/logo100.png`}
+                  src="/logo100.png"
                   alt="OG Pepe"
                   width={32}
                   height={32}
@@ -845,7 +843,7 @@ export default function PepeLanding() {
         <footer className={styles.footer}>
           <div className={styles.footerInner}>
             <div className={styles.footerBrand}>
-              <Image src={`${bp}/logo.png`} alt="OG Pepe" width={32} height={32} />
+              <Image src="/logo.png" alt="OG Pepe" width={32} height={32} />
               <div>
                 <p className={styles.footerBrandName}>OG Pepe</p>
                 <p className={styles.footerTagline}>
