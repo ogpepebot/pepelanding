@@ -43,11 +43,6 @@ jobs:
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
-
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -62,6 +57,8 @@ jobs:
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          PAGES_BASE_PATH: /pepelanding
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
